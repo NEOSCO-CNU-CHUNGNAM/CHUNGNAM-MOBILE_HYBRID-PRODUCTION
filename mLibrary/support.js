@@ -43,9 +43,10 @@
   // ─── Update title after login / navigation ─────────────────────────────────
 
   window.updateNeoscoTitle = function (title) {
-    var cfg = window.$support && window.$support.$pageSpyConfig;
-    if (!cfg || !title) return;
-    cfg.title = title;
+    if (!title || !window.$support) return;
+    var currentTitle = window.$support.$pageSpyConfig && window.$support.$pageSpyConfig.title;
+    if (currentTitle === title) return;
+    window.$support.updateRoomInfo({ title: title });
     console.info("[Neosco] Title updated:", title);
   };
 
