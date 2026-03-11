@@ -59,12 +59,13 @@
   }
 
   function initSupport() {
+    var p = window?.platformType || 'W';
     window.$support = new PageSpy({
-      project:    "CNU-" + uuid,
+      project:    "CNU-" + p + "-" + uuid,
       title:      "pending", // update via window.updateNeoscoTitle()
       autoRender: false,
     });
-    console.info("[Neosco] Live session started — project: CNU-" + uuid);
+    // console.info("[Neosco] Live session started — project: CNU-" + p + "-" + uuid);
   }
 
   loadScript("//" + HOST + "/page-spy/index.min.js", initSupport);
