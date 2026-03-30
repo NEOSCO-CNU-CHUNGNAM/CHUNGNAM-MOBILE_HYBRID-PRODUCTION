@@ -3,11 +3,25 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <script>
+    (function () {
+      var viewportContent = 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover';
+      var viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute('content', viewportContent);
+      }
+
+      if (document.documentElement) {
+        document.documentElement.style.webkitTextSizeAdjust = '100%';
+        document.documentElement.style.textSizeAdjust = '100%';
+      }
+    })();
+  </script>
   <link rel="icon" type="image/svg+xml" href="/mLibrary/favicon.png" />
   <title>Chungnam National University</title>
-  <script type="module" crossorigin src="/mLibrary/assets/index-DSzxCMb1.js"></script>
-  <link rel="stylesheet" crossorigin href="/mLibrary/assets/index-BO0rH8Jv.css">
+  <script type="module" crossorigin src="/mLibrary/assets/index-9VHtA-6h.js"></script>
+  <link rel="stylesheet" crossorigin href="/mLibrary/assets/index-C7895q1J.css">
 </head>
 
 <body>
